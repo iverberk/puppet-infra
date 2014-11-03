@@ -1,5 +1,5 @@
 {
-  "name": "Puppet",
+  "name": "iverberk/puppet-infra",
   "version": "0.1.0",
   "author": "Ivo Verberk",
   "summary": "Install and configure a Puppet infrastructure with the foreman-installer",
