@@ -1,0 +1,14 @@
+{
+  "name": "Puppet",
+  "version": "0.1.0",
+  "author": "Ivo Verberk",
+  "summary": "Install and configure a Puppet infrastructure with the foreman-installer",
+  "license": "Apache 2.0",
+  "source": "https://github.com/iverberk/puppet-infra.git",
+  "project_page": "https://github.com/iverberk/puppet-infra.git",
+  "issues_url": "https://github.com/iverberk/puppet-infra/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
