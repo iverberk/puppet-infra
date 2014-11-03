@@ -1,4 +1,4 @@
-# puppetmaster
+# Puppet Infrastructure
 
 #### Table of Contents
 
