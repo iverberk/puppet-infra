@@ -24,8 +24,7 @@
     tftp_dirs: 
       - /var/lib/tftpboot//pxelinux.cfg
       - /var/lib/tftpboot//boot
-    trusted_hosts: 
-      - puppetmaster.localdomain
+    trusted_hosts: []
     dns_forwarders: []
     bmc: false
     manage_sudoersd: true
