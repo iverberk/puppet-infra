@@ -39,7 +39,7 @@
     puppetdir: /etc/puppet
     customrun_cmd: /bin/false
     dns_tsig_keytab: /etc/foreman-proxy/dns.keytab
-    puppetrun: false
+    puppetrun: true
     repo: stable
     dns_ttl: "86400"
     version: present
