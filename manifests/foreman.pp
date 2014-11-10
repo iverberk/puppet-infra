@@ -1,23 +1,5 @@
 class infra::foreman {
 
-  file { '/var/lib/puppet/ssl/certs':
-    ensure  => present,
-    source  => 'puppet:///modules/infra/ssl/certs',
-    owner   => 'puppet',
-    group   => 'puppet',
-    recurse => true,
-    mode    => '0644'
-  } ->
-
-  file { '/var/lib/puppet/ssl/private_keys':
-    ensure  => present,
-    source  => 'puppet:///modules/infra/ssl/private_keys',
-    owner   => 'puppet',
-    group   => 'puppet',
-    recurse => true,
-    mode    => '0644'
-  } ->
-
   # Provide the answerfile for the puppet installer
   file { '/etc/foreman/foreman-installer-answers.yaml':
     ensure  => present,

@@ -11,7 +11,7 @@ class infra::puppetmaster {
   }
 
   class { 'puppetdb::master::config':
-    puppetdb_server   => 'puppetdb.localdomain',
+    puppetdb_server   => 'puppetdb.dev.local',
     require           => Exec['foreman-installer'],
     strict_validation => false,
     restart_puppet    => false
