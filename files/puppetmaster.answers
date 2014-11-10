@@ -47,7 +47,7 @@
     registered_proxy_url: "https://puppetmaster.localdomain:8443"
     oauth_effective_user: admin
     custom_repo: true
-    foreman_base_url: "https://puppetmaster.localdomain"
+    foreman_base_url: "https://foreman.localdomain"
     realm: false
     dns_provider: nsupdate
     realm_provider: freeipa
