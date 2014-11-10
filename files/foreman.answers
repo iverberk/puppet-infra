@@ -20,7 +20,7 @@
     configure_epel_repo: true
     passenger_scl: ruby193
     passenger_start_timeout: "600"
-    server_ssl_cert: /var/lib/puppet/ssl/certs/foreman.localdomain.pem
+    server_ssl_cert: /var/lib/puppet/ssl/certs/foreman.dev.local.pem
     passenger_interface: ""
     environment: production
     version: present
@@ -35,8 +35,8 @@
     user: foreman
     db_sslmode: 
     authentication: true
-    websockets_ssl_cert: /var/lib/puppet/ssl/certs/foreman.localdomain.pem
-    websockets_ssl_key: /var/lib/puppet/ssl/private_keys/foreman.localdomain.pem
+    websockets_ssl_cert: /var/lib/puppet/ssl/certs/foreman.dev.local.pem
+    websockets_ssl_key: /var/lib/puppet/ssl/private_keys/foreman.dev.local.pem
     configure_ipa_repo: false
     initial_location: 
     admin_email: 
@@ -48,7 +48,7 @@
     custom_repo: true
     passenger_prestart: true
     oauth_consumer_secret: cRa8MitMZvLYdh4wvfQiecnEjCdHgQZz
-    server_ssl_key: /var/lib/puppet/ssl/private_keys/foreman.localdomain.pem
+    server_ssl_key: /var/lib/puppet/ssl/private_keys/foreman.dev.local.pem
     organizations_enabled: false
     admin_first_name: 
     passenger_min_instances: "1"
@@ -56,7 +56,7 @@
     db_host: 
     server_ssl_ca: /var/lib/puppet/ssl/certs/ca.pem
     puppet_home: /var/lib/puppet
-    foreman_url: "https://foreman.localdomain"
+    foreman_url: "https://foreman.dev.local"
     admin_last_name: 
     admin_password: PR6U6tyaS4e6N2VZ
     oauth_active: true
@@ -68,7 +68,7 @@
     db_port: 
     configure_scl_repo: true
     ssl: true
-    servername: foreman.localdomain
+    servername: foreman.dev.local
     use_vhost: true
     unattended: true
   foreman_proxy: false
@@ -133,13 +133,13 @@
     server_reports: foreman
     client_package: 
       - puppet
-    server_certname: foreman.localdomain
+    server_certname: foreman.dev.local
     classfile: "$vardir/classes.txt"
     server_group: puppet
     server_storeconfigs_backend: 
     server_dir: /etc/puppet
     nsauth_template: puppet/namespaceauth.conf.erb
-    server_foreman_ssl_key: /var/lib/puppet/ssl/private_keys/foreman.localdomain.pem
+    server_foreman_ssl_key: /var/lib/puppet/ssl/private_keys/foreman.dev.local.pem
     server_httpd_service: httpd
     version: present
     pluginsource: "puppet:///plugins"
@@ -154,13 +154,13 @@
       - /etc/puppet/environments/common
       - /etc/puppet/modules
       - /usr/share/puppet/modules
-    server_foreman_ssl_cert: /var/lib/puppet/ssl/certs/foreman.localdomain.pem
+    server_foreman_ssl_cert: /var/lib/puppet/ssl/certs/foreman.dev.local.pem
     server_strict_variables: false
     server_ca_proxy: ""
     server_directory_environments: true
     server_puppet_home: /var/lib/puppet
-    srv_domain: localdomain
-    server_foreman_url: "https://foreman.localdomain"
+    srv_domain: dev.local
+    server_foreman_url: "https://foreman.dev.local"
     allow_any_crl_auth: false
     splaylimit: "1800"
     configtimeout: 120
