@@ -173,7 +173,7 @@
     server_foreman_ssl_key: /var/lib/puppet/ssl/private_keys/puppetmaster.localdomain.pem
     user: puppet
     server_common_modules_path: 
-      - /etc/puppet/environments/common
+      - /etc/puppet/environments/common/modules
       - /etc/puppet/modules
       - /usr/share/puppet/modules
     dns_alt_names: []
