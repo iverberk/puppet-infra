@@ -14,7 +14,7 @@
   "foreman::plugin::default_hostgroup": false
   foreman_proxy: 
     virsh_network: default
-    puppet_ssl_key: /var/lib/puppet/ssl/private_keys/puppetmaster.dev.local.pem
+    puppet_ssl_key: /var/lib/puppet/ssl/private_keys/puppetmaster.localdomain.pem
     autosign_location: /etc/puppet/autosign.conf
     puppetca_cmd: "/usr/bin/puppet cert"
     gpgcheck: true
@@ -28,7 +28,7 @@
     dns_forwarders: []
     bmc: false
     manage_sudoersd: true
-    ssl_cert: /var/lib/puppet/ssl/certs/puppetmaster.dev.local.pem
+    ssl_cert: /var/lib/puppet/ssl/certs/puppetmaster.localdomain.pem
     dhcp_range: false
     freeipa_remove_dns: true
     puppet_user: root
@@ -43,17 +43,17 @@
     repo: stable
     dns_ttl: "86400"
     version: present
-    puppet_url: "https://puppetmaster.dev.local:8140"
-    registered_proxy_url: "https://puppetmaster.dev.local:8443"
+    puppet_url: "https://puppetmaster.localdomain:8140"
+    registered_proxy_url: "https://puppetmaster.localdomain:8443"
     oauth_effective_user: admin
     custom_repo: true
-    foreman_base_url: "https://foreman.dev.local"
+    foreman_base_url: "https://foreman.localdomain"
     realm: false
     dns_provider: nsupdate
     realm_provider: freeipa
     puppetssh_command: "/usr/bin/puppet agent --onetime --no-usecacheonfailure"
     puppetrun_cmd: "/usr/bin/puppet kick"
-    dns_tsig_principal: "foremanproxy/puppetmaster.dev.local@LOCAL"
+    dns_tsig_principal: "foremanproxy/puppetmaster.localdomain@LOCAL"
     dns_interface: eth0
     customrun_args: "-ay -f -s"
     dns_reverse: "100.168.192.in-addr.arpa"
@@ -67,7 +67,7 @@
       - menu.c32
       - chain.c32
       - memdisk
-    registered_name: puppetmaster.dev.local
+    registered_name: puppetmaster.localdomain
     puppetssh_keyfile: /etc/foreman-proxy/id_rsa
     dhcp: false
     dhcp_managed: true
@@ -82,7 +82,7 @@
     realm_keytab: /etc/foreman-proxy/freeipa.keytab
     puppetca: true
     oauth_consumer_key: LYNWFSnhPUNZDCQkCV6hhwvxqjGQquDA
-    ssl_key: /var/lib/puppet/ssl/private_keys/puppetmaster.dev.local.pem
+    ssl_key: /var/lib/puppet/ssl/private_keys/puppetmaster.localdomain.pem
     dhcp_key_secret: ""
     bmc_default_provider: ipmitool
     ssl: true
@@ -95,7 +95,7 @@
     puppetssh_sudo: false
     ssldir: /var/lib/puppet/ssl
     tftp_root: /var/lib/tftpboot/
-    puppet_ssl_cert: /var/lib/puppet/ssl/certs/puppetmaster.dev.local.pem
+    puppet_ssl_cert: /var/lib/puppet/ssl/certs/puppetmaster.localdomain.pem
     puppet_use_environment_api: 
     tftp_servername: "172.17.0.58"
     dns_zone: localdomain
@@ -110,7 +110,7 @@
     server_reports: foreman
     server_service_fallback: true
     listen: false
-    server_certname: puppetmaster.dev.local
+    server_certname: puppetmaster.localdomain
     server_strict_variables: false
     server_passenger_max_pool: 12
     server_environments: []
@@ -149,13 +149,13 @@
     agent_template: puppet/agent/puppet.conf.erb
     server_group: puppet
     server_ca: true
-    server_foreman_ssl_cert: /var/lib/puppet/ssl/certs/puppetmaster.dev.local.pem
+    server_foreman_ssl_cert: /var/lib/puppet/ssl/certs/puppetmaster.localdomain.pem
     server: true
     runinterval: 1800
     server_ssl_dir: /var/lib/puppet/ssl
     server_git_repo_path: /var/lib/puppet/puppet.git
     server_environments_owner: puppet
-    server_foreman_url: "https://foreman.dev.local"
+    server_foreman_url: "https://foreman.localdomain"
     server_ca_proxy: ""
     server_environments_mode: "0755"
     server_foreman_ssl_ca: /var/lib/puppet/ssl/certs/ca.pem
@@ -170,7 +170,7 @@
     server_external_nodes: /etc/puppet/node.rb
     server_port: 8140
     server_post_hook_content: puppet/server/post-receive.erb
-    server_foreman_ssl_key: /var/lib/puppet/ssl/private_keys/puppetmaster.dev.local.pem
+    server_foreman_ssl_key: /var/lib/puppet/ssl/private_keys/puppetmaster.localdomain.pem
     user: puppet
     server_common_modules_path: 
       - /etc/puppet/environments/common

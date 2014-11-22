@@ -1,11 +1,13 @@
-class infra::installer {
+class infra::installer (
+  $installer_version = '1.6.2-1.el6'
+) {
 
   package { 'cronie':
     ensure => present
   } ->
 
   package { 'foreman-installer':
-    ensure => '1.6.2-1.el6',
+    ensure => $installer_version,
     notify => Exec['foreman-installer']
   }
 

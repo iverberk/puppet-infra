@@ -1,9 +1,11 @@
-class infra::foreman {
+class infra::foreman (
+  $answers = 'puppet:///modules/infra/foreman.answers'
+) {
 
   # Provide the answerfile for the puppet installer
   file { '/etc/foreman/foreman-installer-answers.yaml':
     ensure  => present,
-    source  => 'puppet:///modules/infra/foreman.answers',
+    source  => $answers,
     owner   => root,
     group   => root,
     mode    => '0600',
