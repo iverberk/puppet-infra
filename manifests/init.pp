@@ -1,5 +1,3 @@
-class infra (
-  $docker = false
-) {
+class infra {
 
 }
