@@ -10,6 +10,7 @@ class infra::foreman (
     group   => root,
     mode    => '0600',
     require => Package['foreman-installer'],
+    notify  => Exec['foreman-installer'],
   }
 
   include infra::installer

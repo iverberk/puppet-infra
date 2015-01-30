@@ -11,6 +11,7 @@ class infra::puppetmaster (
     group   => root,
     mode    => '0600',
     require => Package['foreman-installer'],
+    notify  => Exec['foreman-installer'],
   }
 
   class { 'puppetdb::master::config':
